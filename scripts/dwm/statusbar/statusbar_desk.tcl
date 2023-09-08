@@ -2,7 +2,7 @@
 # statusbar.tcl \
 exec tclsh "$0" "$@"
 
-set path "/home/klolefir/scripts/statusbar"
+set path "/home/klolrannet/linux-conf/scripts/dwm/statusbar"
 set counter 0
 
 while { true } {
