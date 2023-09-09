@@ -18,13 +18,3 @@ if { $argc >= 1 } {
 	set brightness [ exec xrandr --prop --verbose | grep -A10 "connected" | grep "Brightness" | cut -d " " -f 2 ]
 	puts "Current brightness is [ expr $brightness * 100 ]%"
 }
-
-
-
-if 0 {
-	set status [ catch { puts [  exec ls -l | grep "klolefir" ] }  result ]
-	puts $status
-	puts $errorCode
-	puts $result
-}
-

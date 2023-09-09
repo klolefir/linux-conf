@@ -2,7 +2,8 @@
 # statusbar.tcl \
 exec tclsh "$0" "$@"
 
-set path "/home/klolrannet/linux-conf/scripts/dwm/statusbar"
+set user [ exec whoami ]
+set path "/home/${user}/linux-conf/scripts/dwm/statusbar"
 set counter 0
 
 while { true } {
@@ -40,8 +41,3 @@ while { true } {
 		set counter 0
 	}
 }
-
-
-
-
-

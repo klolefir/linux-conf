@@ -2,15 +2,18 @@
 # set_color.tcl \
 exec tclsh "$0" "$@"
 
+set user [ exec whoami ]
+
 while { true } {
 
-	set file [ exec find /home/klolrannet/pictures/ -type f | shuf -n1 ]
+	set file [ exec find /home/${user}/images/pictures_xxx -type f | shuf -n1 ]
 
-	exec /home/klolrannet/.local/bin/wal -i $file
-	exec /usr/bin/python3 /home/klolrannet/linux-conf/scripts/pywal/change_color.py
-	exec xrdb -merge /home/klolrannet/.Xresources
+	exec /home/${user}/.local/bin/wal -i $file
+	#exec /usr/bin/python3 /home/${user}/linux-conf/scripts/pywal/change_color.py
+	exec /home/${user}/linux-conf/scripts/pywal/change_color.tcl
+	exec xrdb -merge /home/${user}/.Xresources
 	exec xdotool key shift+alt+F5
-	#exec /home/klolrannet/.local/bin/pywalfox update
+	#exec /home/${user}/.local/bin/pywalfox update
 
 	exec sleep 15m
 }
