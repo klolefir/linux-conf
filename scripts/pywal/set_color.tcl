@@ -6,10 +6,10 @@ set user [ exec whoami ]
 
 while { true } {
 
-	set file [ exec find /home/${user}/images/pictures_xxx -type f | shuf -n1 ]
+	#set file [ exec find /home/${user}/images/pictures_xxx -type f | shuf -n1 ]
+	set file [ exec find /home/${user}/images/wallhaven -type f | shuf -n1 ]
 
 	exec /home/${user}/.local/bin/wal -i $file
-	#exec /usr/bin/python3 /home/${user}/linux-conf/scripts/pywal/change_color.py
 	exec /home/${user}/linux-conf/scripts/pywal/change_color.tcl
 	exec xrdb -merge /home/${user}/.Xresources
 	exec xdotool key shift+alt+F5

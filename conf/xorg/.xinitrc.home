@@ -1,0 +1,5 @@
+/home/$(whoami)/linux-conf/scripts/init/init.tcl
+eval $(ssh-agent)
+ssh-add /home/$(whoami)/.ssh/id_git
+
+exec dwm

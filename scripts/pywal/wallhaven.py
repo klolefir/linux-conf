@@ -8,7 +8,7 @@ import pathlib
 import string
 from PIL import Image
 
-DOWNLOAD_DIR = f"{str(pathlib.Path.home())}/images/pix/wall"
+DOWNLOAD_DIR = f"{str(pathlib.Path.home())}/images/wallhaven"
 
 def generate_id():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=6))
