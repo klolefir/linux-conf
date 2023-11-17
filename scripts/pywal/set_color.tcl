@@ -6,8 +6,9 @@ set user [ exec whoami ]
 
 while { true } {
 
+	set file [ exec find /home/${user}/images/pictures -type f | shuf -n1 ]
 	#set file [ exec find /home/${user}/images/pictures_xxx -type f | shuf -n1 ]
-	set file [ exec find /home/${user}/images/wallhaven -type f | shuf -n1 ]
+	#set file [ exec find /home/${user}/images/wallhaven -type f | shuf -n1 ]
 
 	exec /home/${user}/.local/bin/wal -i $file
 	exec /home/${user}/linux-conf/scripts/pywal/change_color.tcl

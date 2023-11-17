@@ -47,19 +47,3 @@ for wallpaper in wallpapers:
 
 
 print("Download complite!")
-
-
-if 0:
-    img_dir = "/home/klolefir/pix/wall/"
-
-    for filename in os.listdir(img_dir):
-        print(filename)
-        filepath = os.path.join(img_dir, filename)
-        with Image.open(filepath) as im:
-            x, y = im.size
-            print(x)
-            print(y)
-            if (x/y) == (16/9):
-                print("Good!")
-            else:
-                os.remove(filepath)
